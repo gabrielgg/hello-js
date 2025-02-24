@@ -12,10 +12,8 @@
     function main()
     {
       // Set clientSideID to your LaunchDarkly client-side ID
-      const clientSideID = '';
+      const clientSideID = '67b84999a5fe770a843c7c4e';
 
-      // Set flagKey to the feature flag key you want to evaluate
-      const flagKey = 'sample-feature';
 
       // Set up the evaluation context. This context should appear on your
       // LaunchDarkly contexts dashboard soon after you run the demo.
@@ -24,6 +22,42 @@
         key: 'example-user-key',
         name: 'Sandy'
       };
+
+
+      const body = document.body;
+            
+	  const banner = document.createElement("div");
+	  banner.className = "banner";
+	  banner.textContent = "ABC Company";
+	  body.appendChild(banner);
+	
+	  const container = document.createElement("div");
+	  container.className = "container";
+	  body.appendChild(container);
+	
+	  const box1 = document.createElement("div");
+	  box1.className = "box";
+	  box1.id = "box1";
+	  box1.textContent = "Lorem ipsum";
+	  container.appendChild(box1);
+	
+	  const box2 = document.createElement("div");
+	  box2.className = "box";
+	  box2.id = "box2";
+	  box2.textContent = "Lorem ipsum";
+	  container.appendChild(box2);
+	
+	  const box3 = document.createElement("div");
+	  box3.className = "box";
+	  box3.id = "box3";
+	  box3.textContent = "Lorem ipsum";
+	  container.appendChild(box3);
+	
+	  const box4 = document.createElement("div");
+	  box4.className = "box";
+	  box4.id = "box4";
+	  box4.textContent = "Lorem ipsum";
+	  container.appendChild(box4);
 
       var div = document.createElement('div');
       document.body.appendChild(div);
@@ -37,9 +71,10 @@
       const ldclient = LDClient.initialize(clientSideID, context);
 
       function render() {
+        const flagKey = 'real-time-notification';
         const flagValue = ldclient.variation(flagKey, false);
-      const label = `The ${flagKey} feature flag evaluates to ${flagValue}.`;
-      document.body.style.background = flagValue ? '#00844B' : '#373841';
+        const label = `The ${flagKey} feature flag evaluates to ${flagValue}.`;
+        document.body.style.background = flagValue ? '#00844B' : '#373841';
         div.replaceChild(document.createTextNode(label), div.firstChild);
       }
 

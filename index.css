@@ -8,5 +8,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  .banner {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	padding: 20px;
+	background-image: url('images/abc.png');
+	background-size: cover;
+	background-position: center;
+  }
 }
 
