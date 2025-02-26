@@ -13,4 +13,4 @@ Open https://www.gagv.org.uk/hello-js/index.html
 
 #### Deploy instructions
 
-Copy `index.html` and `index.css` to a configured docroot in a web server of your choice.
+Copy `index.html`, `index.css` and the images directory to a configured docroot in a web server of your choice.
