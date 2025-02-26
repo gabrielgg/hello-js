@@ -34,11 +34,12 @@
 	  const container = document.createElement("div");
 	  container.className = "container";
 	  body.appendChild(container);
-	
+
+      // Real time feature
 	  const box1 = document.createElement("div");
 	  box1.className = "box";
 	  box1.id = "box1";
-	  box1.textContent = "Lorem ipsum";
+	  box1.textContent = "Initialising...";
 	  container.appendChild(box1);
 	
 	  const box2 = document.createElement("div");
@@ -59,9 +60,29 @@
 	  box4.textContent = "Lorem ipsum";
 	  container.appendChild(box4);
 
-      var div = document.createElement('div');
-      document.body.appendChild(div);
-      div.appendChild(document.createTextNode('Initializing...'));
+	  const box5 = document.createElement("div");
+	  box5.className = "box";
+	  box5.id = "box5";
+	  box5.textContent = "Lorem ipsum";
+	  container.appendChild(box5);
+
+	  const box6 = document.createElement("div");
+	  box6.className = "box";
+	  box6.id = "box6";
+	  box6.textContent = "Lorem ipsum";
+	  container.appendChild(box6);
+
+	  const box7 = document.createElement("div");
+	  box7.className = "box";
+	  box7.id = "box7";
+	  box7.textContent = "Lorem ipsum";
+	  container.appendChild(box7);
+
+	  const box8 = document.createElement("div");
+	  box8.className = "box";
+	  box8.id = "box8";
+	  box8.textContent = "Lorem ipsum";
+	  container.appendChild(box8);
 
       if (clientSideID === '') {
         div.replaceChild(document.createTextNode('Please edit index.html to set clientSideID to your LaunchDarkly client-side ID first'), div.firstChild);
@@ -73,17 +94,14 @@
       function render() {
         const flagKey = 'real-time-notification';
         const flagValue = ldclient.variation(flagKey, false);
-        const label = `The ${flagKey} feature flag evaluates to ${flagValue}.`;
-        document.body.style.background = flagValue ? '#00844B' : '#373841';
-        div.replaceChild(document.createTextNode(label), div.firstChild);
+		  box1.style.background = flagValue ? '#00844B' : '#373841';
+		if(flagValue == true) {
+		  box1.textContent = "Real time notifications feature is ON";
+		} else {
+		  box1.textContent = "Real time notifications feature is OFF";
+		}
       }
 
-      ldclient.on('initialized', () => {
-        div.replaceChild(document.createTextNode('SDK successfully initialized!'), div.firstChild);
-      });
-      ldclient.on('failed', () => {
-        div.replaceChild(document.createTextNode('SDK failed to initialize'), div.firstChild);
-      });
       ldclient.on('ready', render);
       ldclient.on('change', render);
     }

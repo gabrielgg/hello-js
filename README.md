@@ -1,18 +1,16 @@
-### LaunchDarkly sample JavaScript application 
+### LaunchDarkly SE Technical Exercise
 
-We've built a simple browser application that demonstrates how LaunchDarkly's SDK works. 
+This repository contains a sample web JS application to complete the SE Technical Exercise
 
-Below, you'll find the basic build procedure, but for more comprehensive instructions, you can visit your [Quickstart page](https://app.launchdarkly.com/quickstart#/) or the [JavaScript SDK reference guide](https://docs.launchdarkly.com/sdk/client-side/javascript).
+#### Run instructions 
 
-#### Build instructions 
-
-1. Edit `index.html` and set the value of `clientSideID` to your LaunchDarkly client-side ID. If there is an existing boolean feature flag in your LaunchDarkly project that you want to evaluate, set `flagKey` to the flag key.
-
-```
-const clientSideID = 'myClientSideID';
-const flagKey = 'my-flag-key';
-```
-
+1. Clone this repository
 2. Open `index.html` in your browser.
 
-You should receive the message "The <flagKey> feature flag evaluates to <flagValue>." The application will run continuously and react to the flag changes in LaunchDarkly.
+-or-
+
+Open https://www.gagv.org.uk/hello-js/index.html
+
+#### Deploy instructions
+
+Copy `index.html` and `index.css` to a configured docroot in a web server of your choice.
