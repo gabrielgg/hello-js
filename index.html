@@ -103,7 +103,12 @@
         const flagValue = ldclient.variation(flagKey, false);
 		  box1.style.background = flagValue ? '#00844B' : '#373841';
 		if(flagValue == true) {
-		  box1.textContent = "Real time notifications feature is ON";
+		  box1.replaceChild(document.createTextNode("Real time notifications feature is ON"), box1.firstChild);
+		  const button = document.createElement("button");
+		  button.id = "experimentation-button";
+		  button.textContent = "Click to experiment";
+		  box1.appendChild(button);
+		  ldclient.track('experiment-click-rate');
 		} else {
 		  box1.textContent = "Real time notifications feature is OFF";
 		}
