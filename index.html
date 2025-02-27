@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
     <title>LaunchDarkly SE Technical Exercise</title>
-    <script src="https://unpkg.com/launchdarkly-js-client-sdk@3"></script>
+    <script src="https://unpkg.com/launchdarkly-js-client-sdk@3.5"></script>
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
@@ -15,12 +15,13 @@
       const clientSideID = '67b84999a5fe770a843c7c4e';
 
 
-      // Set up the evaluation context. This context should appear on your
-      // LaunchDarkly contexts dashboard soon after you run the demo.
+      // Set up a context depending on the 'beta' parameter in the URI
+	  var queryString = window.location.search;
+	  var urlParams = new URLSearchParams(queryString);
       const context = {
         kind: 'user',
-        key: 'example-user-key',
-        name: 'Sandy'
+        key: urlParams.get('beta') != null ? 'beta-users' : 'user-key-example',
+        name: urlParams.get('user') != null ? urlParams.get('user') : 'Sandy'
       };
 
 
@@ -83,6 +84,12 @@
 	  box8.id = "box8";
 	  box8.textContent = "Lorem ipsum";
 	  container.appendChild(box8);
+
+	  const box9 = document.createElement("div");
+	  box9.className = "box";
+	  box9.id = "box9";
+	  box9.textContent = "Lorem ipsum";
+	  container.appendChild(box9);
 
       if (clientSideID === '') {
         div.replaceChild(document.createTextNode('Please edit index.html to set clientSideID to your LaunchDarkly client-side ID first'), div.firstChild);
