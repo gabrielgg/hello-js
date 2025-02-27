@@ -19,7 +19,7 @@
 	  var queryString = window.location.search;
 	  var urlParams = new URLSearchParams(queryString);
       const context = {
-        kind: 'user',
+        kind: 'guest',
         key: urlParams.get('beta') != null ? 'beta-users' : 'user-key-example',
         name: urlParams.get('user') != null ? urlParams.get('user') : 'Sandy'
       };
