@@ -5,7 +5,7 @@ This repository contains a sample web JS application to complete the SE Technica
 #### Run instructions 
 
 1. Clone this repository
-2. Open `index.html` in your browser.
+2. Open `index.html` in your browser
 
 -or-
 
@@ -13,4 +13,4 @@ Open https://www.gagv.org.uk/hello-js/index.html
 
 #### Deploy instructions
 
-Copy `index.html`, `index.css` and the images directory to a configured docroot in a web server of your choice.
+Copy `index.html`, `index.css` and the `images` directory to a configured docroot in a web server of your choice
