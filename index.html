@@ -191,25 +191,14 @@
 		  box1.replaceChild(box1_content, box1.firstChild);
 		  ldclient.track('experiment-click-rate');
 		} else {
-		  //box1.textContent = "Real time notifications feature is OFF";
 		  const newbox1 = document.createElement("div");
-		  //box1.className = "box";
-		  //box1.id = "box1";
 		  // Demo Content 1: text + image
-		  const demo1_box1 = createDemoContent("Responsive demo with an image.");
-		  const img1_box1 = document.createElement("img");
-		  img1_box1.src = "https://picsum.photos/200/200?random=1";
-		  img1_box1.alt = "Random demo image";
-		  demo1_box1.appendChild(img1_box1);
+		  const demo1_box1 = createDemoContent("Static notification feed");
 		  newbox1.appendChild(demo1_box1);
-		  // Demo Content 2: text + button
-		  const demo2_box1 = createDemoContent("Responsive demo with a button.");
-		  const btn_box1 = document.createElement("button");
-		  btn_box1.textContent = "Action 1";
-		  demo2_box1.appendChild(btn_box1);
-		  newbox1.appendChild(demo2_box1);
 		  box1.replaceChild(newbox1, box1.firstChild);
 		}
+
+
       }
 
       ldclient.on('ready', render);
