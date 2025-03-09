@@ -24,6 +24,15 @@
         name: urlParams.get('user') != null ? urlParams.get('user') : 'Sandy'
       };
 
+      // Helper function to create a demo content container with a paragraph
+      function createDemoContent(text) {
+        const demoContent = document.createElement("div");
+        demoContent.className = "demo-content";
+        const p = document.createElement("p");
+        p.textContent = text;
+        demoContent.appendChild(p);
+        return demoContent;
+      }
 
       const body = document.body;
             
@@ -44,46 +53,116 @@
 	  container.appendChild(box1);
 	
 	  const box2 = document.createElement("div");
-	  box2.className = "box";
-	  box2.id = "box2";
-	  box2.textContent = "Lorem ipsum";
-	  container.appendChild(box2);
+      box2.className = "box";
+      box2.id = "box2";
+	  // Demo Content 1 for Box 2: text + image + input field
+      const demo1_box2 = createDemoContent("Responsive demo with an image and a field.");
+      const img_box2 = document.createElement("img");
+      img_box2.src = "https://picsum.photos/200/200?random=2";
+      img_box2.alt = "Random image";
+      demo1_box2.appendChild(img_box2);
+      const input_box2 = document.createElement("input");
+      input_box2.type = "text";
+      input_box2.placeholder = "Enter your name";
+      demo1_box2.appendChild(input_box2);
+      box2.appendChild(demo1_box2);
+      // Demo Content 2: text + button
+      const demo2_box2 = createDemoContent("Responsive demo with a button.");
+      const btn_box2 = document.createElement("button");
+      btn_box2.textContent = "Submit";
+      demo2_box2.appendChild(btn_box2);
+      box2.appendChild(demo2_box2);
+      container.appendChild(box2);
 	
 	  const box3 = document.createElement("div");
-	  box3.className = "box";
-	  box3.id = "box3";
-	  box3.textContent = "Lorem ipsum";
-	  container.appendChild(box3);
+      box3.className = "box";
+      box3.id = "box3";
+
+      // Demo Content 1 for Box 3: text only
+      const demo1_box3 = createDemoContent("Responsive demo text only.");
+      box3.appendChild(demo1_box3);
+
+      // Demo Content 2 for Box 3: text + image + button
+      const demo2_box3 = createDemoContent("Responsive demo with an image and a button.");
+      const img_box3 = document.createElement("img");
+      img_box3.src = "https://picsum.photos/200/200?random=3";
+      img_box3.alt = "Random demo image";
+      demo2_box3.appendChild(img_box3);
+      const btn_box3 = document.createElement("button");
+      btn_box3.textContent = "Click me";
+      demo2_box3.appendChild(btn_box3);
+      box3.appendChild(demo2_box3);
+
+      container.appendChild(box3);
 	
 	  const box4 = document.createElement("div");
-	  box4.className = "box";
-	  box4.id = "box4";
-	  box4.textContent = "Lorem ipsum";
-	  container.appendChild(box4);
+      box4.className = "box";
+      box4.id = "box4";
+
+      // Demo Content 1 for Box 4: text + input field
+      const demo1_box4 = createDemoContent("Responsive demo with a field.");
+      const input_box4 = document.createElement("input");
+      input_box4.type = "text";
+      input_box4.placeholder = "Type something";
+      demo1_box4.appendChild(input_box4);
+      box4.appendChild(demo1_box4);
+
+      // Demo Content 2 for Box 4: text + image
+      const demo2_box4 = createDemoContent("Responsive demo with an image.");
+      const img_box4 = document.createElement("img");
+      img_box4.src = "https://picsum.photos/200/200?random=4";
+      img_box4.alt = "Random demo image";
+      demo2_box4.appendChild(img_box4);
+      box4.appendChild(demo2_box4);
+
+      container.appendChild(box4);
 
 	  const box5 = document.createElement("div");
-	  box5.className = "box";
-	  box5.id = "box5";
-	  box5.textContent = "Lorem ipsum";
-	  container.appendChild(box5);
+      box5.className = "box";
+      box5.id = "box5";
+      // Demo Content: text + image
+      const demo_box5 = createDemoContent("Responsive demo with text and an image.");
+      const img_box5 = document.createElement("img");
+      img_box5.src = "https://picsum.photos/200/200?random=5";
+      img_box5.alt = "Random demo image";
+      demo_box5.appendChild(img_box5);
+      box5.appendChild(demo_box5);
+      container.appendChild(box5);
 
 	  const box6 = document.createElement("div");
-	  box6.className = "box";
-	  box6.id = "box6";
-	  box6.textContent = "Lorem ipsum";
-	  container.appendChild(box6);
+      box6.className = "box";
+      box6.id = "box6";
+      // Demo Content: text + input field
+      const demo_box6 = createDemoContent("Responsive demo with text and a field.");
+      const input_box6 = document.createElement("input");
+      input_box6.type = "text";
+      input_box6.placeholder = "Your email";
+      demo_box6.appendChild(input_box6);
+      box6.appendChild(demo_box6);
+      container.appendChild(box6);
 
-	  const box7 = document.createElement("div");
-	  box7.className = "box";
-	  box7.id = "box7";
-	  box7.textContent = "Lorem ipsum";
-	  container.appendChild(box7);
+      const box7 = document.createElement("div");
+      box7.className = "box";
+      box7.id = "box7";
+      // Demo Content: text + image + button
+      const demo_box7 = createDemoContent("Responsive demo with text, an image, and a button.");
+      const img_box7 = document.createElement("img");
+      img_box7.src = "https://picsum.photos/200/200?random=6";
+      img_box7.alt = "Random demo image";
+      demo_box7.appendChild(img_box7);
+      const btn_box7 = document.createElement("button");
+      btn_box7.textContent = "Learn More";
+      demo_box7.appendChild(btn_box7);
+      box7.appendChild(demo_box7);
+      container.appendChild(box7);
 
-	  const box8 = document.createElement("div");
-	  box8.className = "box";
-	  box8.id = "box8";
-	  box8.textContent = "Lorem ipsum";
-	  container.appendChild(box8);
+      const box8 = document.createElement("div");
+      box8.className = "box";
+      box8.id = "box8";
+      // Demo Content: text only
+      const demo_box8 = createDemoContent("Responsive demo with text only.");
+      box8.appendChild(demo_box8);
+      container.appendChild(box8);
 
 	  const box9 = document.createElement("div");
 	  box9.className = "box";
@@ -110,7 +189,24 @@
 		  box1.appendChild(button);
 		  ldclient.track('experiment-click-rate');
 		} else {
-		  box1.textContent = "Real time notifications feature is OFF";
+		  //box1.textContent = "Real time notifications feature is OFF";
+		  const newbox1 = document.createElement("div");
+		  //box1.className = "box";
+		  //box1.id = "box1";
+		  // Demo Content 1: text + image
+		  const demo1_box1 = createDemoContent("Responsive demo with an image.");
+		  const img1_box1 = document.createElement("img");
+		  img1_box1.src = "https://picsum.photos/200/200?random=1";
+		  img1_box1.alt = "Random demo image";
+		  demo1_box1.appendChild(img1_box1);
+		  newbox1.appendChild(demo1_box1);
+		  // Demo Content 2: text + button
+		  const demo2_box1 = createDemoContent("Responsive demo with a button.");
+		  const btn_box1 = document.createElement("button");
+		  btn_box1.textContent = "Action 1";
+		  demo2_box1.appendChild(btn_box1);
+		  newbox1.appendChild(demo2_box1);
+		  box1.replaceChild(newbox1, box1.firstChild);
 		}
       }
 
